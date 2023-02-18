@@ -4,28 +4,19 @@
 	font-family: sans-serif;
 }
 
-.body {
-	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("/animated.gif");
+body {
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("/images/animated.gif");
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
 }
-.logo {
-	display: flex;
-	justify-content: center;
-}
-.logo span{
-	font-size: 30px;
-}
-.logo_name{
-	font-size: 20px;
-	color: aqua;
-}
-.logo_name span{
-	font-size: 20px;
-	color: #fff;
-}
+@media (max-width: 412px){
+	.body{
+		height: 100%;
+		width: 100%;
+	}
+	}
 .form-box
 {
 	width: 380px;
@@ -37,6 +28,7 @@
 	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0px 0px 100px rgba(0,0,0,0.4);
+	margin-top: 108px;
 }
 
 .button-box

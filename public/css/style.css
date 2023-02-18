@@ -670,9 +670,8 @@ margin-right: 20px;
 	justify-content: space-around;
 }
 .cc {
-	height: 400px;
 	width: 400px;
-	height: 500px;
+	height: 600px;
 	border-radius: 10px;
 	justify-content: center;
 	box-shadow: 1px 1px 20px rgba(0,0,0,0.4);
