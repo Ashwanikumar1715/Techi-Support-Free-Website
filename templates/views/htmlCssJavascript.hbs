@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/specialization.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>TechiSupport</title>
+</head>
+
+<body>
+    {{>header}}
+    {{!-- introduction --}}
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <h1 class="h1 hero-title">Start Your Web development journey with Html and Css</h1>
+
+                <p class="section-text">
+                    The course is designed for beginers with complete resources.
+                    Complete your basics and fundamental with our resources.
+                    feel free to message or mail to us foe feedback and improvement.
+                </p>
+
+            </div>
+            <div class="hero-banner">
+                <img src="images/heading.jpg" style="border-radius: 50%;"
+                    alt="A young lady sits, holding a pen and a notebook.">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    {{!-- notes --}}
+
+    <div class="title2" id="html_css">
+        <p class="upper-heading">HTML Tutorial For Beginners In Hindi (With Notes)</p><br>
+        <center>
+            <p class="sub-hed">Chapter – 0 (Introduction)</p>
+        </center>
+    </div>
+    <div class="notes-con">
+        <p>HTML – Hyper Text Markup Language</p>
+        <p>Html is the language of the web. It is used to create websites.</p>
+        <p>We use HTML tags to define the look and feel of a website.</p>
+        <p>With an understanding of these tags and How to put them together, we can create beautiful</p>
+        <p>websites easily!</p>
+        <p class="sub-hed">Then why CSS and JavaScript</p>
+        <ul>
+            <li> HTML is used for defining the layout of a page – A barebone page structure.</li>
+            <li> CSS is used to add styling to that barebone page created using HTML.</li>
+            <li> JavaScript (JS) is used to program logic for the page layout. E.g. what happens when a user hovers on a
+                text when to hide or show elements etc?</li>
+        </ul>
+
+        <p class="sub-hed">A Beautiful analogy</p>
+        <p>HTML = Card body (only metal)</p>
+        <p>CSS = Car paint, design, etc.</p>
+        <p>JavaScript = Car engine + Interior logic</p>
+
+        <p class="sub-hed">Installing VS Code</p>
+        <p>We can use any text editor of our choice. Here, I am using VS Code because it is lightweight, open-source &
+            from
+            Microsoft.</p>
+        <ul>
+            <li> Go to google, search for VS Code, download and install it.</li>
+        </ul>
+        <p class="sub-hed">Note:</p>You can write HTML even in Notepad. Text editors like VS Code just makes things
+        easier.
+        <p>We can use any text editor of our choice. Here, I am using VS Code because it is lightweight, open-source &
+            from
+            Microsoft.</p>
+        <ul>
+            <li> Go to google, search for VS Code, download and install it.</li>
+        </ul>
+        <h3>Note:</h3>You can write HTML even in Notepad. Text editors like VS Code just makes things easier.
+        <br><br>
+        <hr>
+        <center>
+            <p class="sub-hed">Chapter – 1 (Creating our first website)</p>
+        </center>
+        {{!-- jsd --}}
+        //1233
+        <p> We start to build a website by creating a file named <span style="font-weight: bolder;">index.html</span>,
+            is a special filename that is presented when the website root address is typed.</p>
+        <p class="sub-hed">A Basic HTML Page</p>
+        <div class="codes">
+            <button onclick="myFunction()" style="float: right;">Copy text</button>
+            <pre>  &lt;!Doctype html&gt; - Specifies this is an html5 document
+                   lt;html&gt;   &lt;!--root of an HTML page --&gt;
+	
+	                &lt;head&gt;   &lt;!--Contains page metadata--&gt;
+	
+	                   &lt;title&gt; code Editz  &lt;/title&gt;   title &lt;!--Contains title --&gt;
+	
+	                 &lt;/head&gt;                                           
+	
+	                 &lt;body&gt;   &lt;!-- Main body of the page (rendered by browser) --&gt;
+	
+	                 &lt;h1&gt; This is a heading  &lt;/h1&gt;     &lt;!--heading tag --&gt;
+	
+	                 &lt;p&gt; My paragraph  &lt;/p&gt;    &lt;!-- paragraph tag --&gt;
+	
+	                &lt;/body&gt;   &lt;!--closing body tag--&gt;
+	
+	                &lt;/html&gt;    &lt;!--closing html tag -&gt;
+                    </pre>
+        </div>
+
+        <h3>"A tag is like a container for either content or other HTML tags."</h3><br><br>
+        <p class="sub-sub-hed">Important Notes:</p>
+        <ul>
+            <li>Head & body tags are children of HTML tag.</li>
+            <li> HTML is the parent of Head and Body tags.</li>
+            <li> Most of the HTML elements have opening & closing tag with content in between opening and closing tags.
+            </li>
+            <li> Some HTML tags have no content. These are called Empty elements. For example, <br> tag</li>
+            <li> We can either use .htm or .html extension to save our html code.</li>
+            <li> You can use the “Inspect Element” or “View Page Source” option from chrome to look into a website’s
+                HTML code.</li>
+        </ul>
+
+        <p class="sub-sub-hed">HTML element = Start tag + Content + End tag</p>
+        <p class="sub-hed">Comments in HTML</p>
+        <p>Comments in HTML are used to mark text which should not be parsed. They can help during documentation of the
+            source code.</p>
+        <pre><p class="sub-sub-hed">&lt;!-- HTML Comment --&gt;</p></pre>
+        <p class="sub-hed">Case Sensitivity</p>
+        <p>HTML is a case insensitive language.
+        <pre> <p class="sub-sub-hed">&ltH1&gt; and &lt;h1&gt;</p></pre> are the same.</p>
+        <br><br>
+        <hr>
+        <center>
+            <p class="sub-hed">Chapter – 2 (Basic HTML Tags)</p>
+        </center>
+        <p>We can add elements inside the body tag to define the page layout.</p>
+        <p class="sub-hed">HTML Element</p>
+        Everything from starting to the ending tag
+        <div class="codes">
+            <pre>                 &lt;body&gt;    - Opening tag
+
+			-Content-
+
+			&lt;/body&gt;   - Closing tag</pre>
+        </div>
+        <br>
+        <p class="sub-hed">HTML Attributes</p>
+        <p>Used to add more information corresponding to an HTML tag. <br>
+
+            Example: &lt;a href=”/”&gt; Code Editz &lt;/a&gt;<br>
+
+            &lt;a&gt; = anchor tag <br>
+
+            href is the attribute of above element <br>
+
+            We can either use single or double quotes in attributes.</p> <br>
+        <p class="sub-hed">The Heading Tag</p>
+        <p>Heading tag is used to mark heading in HTML. From h1 to h6, we have tags for the most important to the least
+            important heading.
+        </p> <br>
+        <div class="codes">
+            <pre>
+            &lt;h1&gt; Most important heading &lt;/h1> <br>
+
+            &lt;h2> Another heading H2 &lt;/h2&gt; <br>
+
+            &lt;h3&gt; Another heading H3 &lt;/h3&gt; <br>
+
+            &lt;h4&gt; Another heading H4 &lt;/h4&gt; <br>
+
+            &lt;h5&gt; Another heading H5 &lt;/h5&gt; <br>
+
+            &lt;h6&gt; Least important heading &lt;/h6&gt;
+        </pre>
+        </div>
+        <p class="sub-sub-hed"> Notes:</p> We should not use HTML headings to make text thick or bold.
+        <br><br>
+        <p class="sub-hed">The Paragraph Tag</p>
+        <p>Paragraph tags are used to add paragraphs to an HTML page. <br>
+
+            &lt;p&gt; This is a paragraph &lt;/p&gt;</p> <br><br>
+        <p class="sub-hed">The Anchor Tag</p>
+        <p>The Anchor tag is used to add links to existing content inside an HTML page. <br>
+
+            &lt;a href=” ”&gt; Click Me &lt;/a&gt;</p><br><br>
+        <p class="sub-hed">Bold, italic and underline Tags</p>
+        <p>We can use bold, italic and underline tags to highlight the text as follows:
+        </p>
+        <div class="codes">
+            <pre>
+
+            &lt;b&gt; This is bold &lt;/b&gt;<br>
+
+            &lt;i&gt; This is italic &lt;/i&gt;<br>
+
+            &lt;u&gt; This is underline &lt;/u&gt;
+            </pre>
+        </div>
+        <p class="sub-hed">br Tag</p>
+        <p>The &lt;br&gt; tag is used to create line breaks in an HTML document.</p><br><br>
+        <p class="sub-hed">hr Tag</p>
+        <p>&lt;hr&gt; tag in HTML is used to create a horizontal ruler often used to separate the content.</p><br><br>
+        <p class="sub-hed">Subscript and Superscript</p>
+        <p>We can add subscript and superscripts in HTML as follows: <br>
+
+            &lt;sub&gt; this &lt;/sub&gt; is subscript <br>
+
+            &lt;sup&gt; this &lt;/sup&gt; is superscript</p><br>
+        <p class="sub-hed">pre Tag</p>
+        <p>HTML always ignores extra spaces and newlines. In order to display a piece of text as it is, we use pre tag
+            <br>
+
+            &lt;pre&gt; <br>
+
+            This is written <br>
+
+            Using pre <br>
+
+            Tag <br>
+
+            &lt;/pre&gt;
+        </p> <br>
+        <span style="font-weight: bolder;">Note: </span>Above text will get rendered as it is. <br><br>
+        <hr><br>
+        <center>
+            <p class="sub-hed">Chapter – 3 (Creating a page layout)</p>
+
+        </center>
+        <p>When we use the right tag in right place, it results in a better page layout, better indexing by search
+            engines, and better user experience. <br>
+
+            We use the following tag to get the job done </p><br><br>
+            <div class="codes">
+                <pre>
+                    &lt;header&gt; #It contains nav tag (Navigation bar) <br>
+
+            &lt;main&gt;<br>
+
+            &lt;footer&gt;<br>
+
+            Above tags are used for website layout <br> <br>
+
+
+
+            Inside the main tag we insert the following tags <br>
+
+            &lt;main> &gt; #The main opening tag <br><br>
+
+            &lt;sectio&gt; #A page section <br><br>
+
+            &lt;articl&gt; #A self-contained content <br><br>
+
+            &lt;aside&gt; #Content aside from the content (e.g. Ads etc.) <br><br>
+
+            &lt;/main&gt; #the main closing tag
+                </pre>
+            </div>
+        Creating a page like this is not necessary but it creates a readable and structured layout. Also, they are
+        useful for SEO. <br><br><br>
+        <p class="sub-hed">Link attributes</p><br><br>
+        <p> 
+<div class="codes">
+    <pre>&lt;a href=”/contact”&gt; Contact Us &lt;/a&gt; <br>
+
+            #above tag will allow the contact page to open in same tab <br><br>
+
+
+
+            &lt;a href=”/contact” target=’_blank’&gt; Contact Us &lt;a&gt; <br>
+
+            #above tag will open contact page in new tab</pre>
+</div>
+
+
+            We can put any content inside an anchor tag (images, headings, etc. are all allowed) <br><br>
+
+
+
+            If the page is inside a directory, we need to make sure that we link to the correct page. [Same applies to
+            img tag as well] <br><br>
+
+
+
+            We can add links to images like this <br>
+
+            &lt;a href=”/about”&gt;&lt;img src=”a.jpg” width=”120”>&lt;/a&gt; <br>
+
+            [Height of image will be set automatically</p> <br><br><br>
+        <p class="sub-hed">The Div tag</p><br>
+        <p>&lt;div&gt; tag is often used as a container for other elements. <br>
+
+            div is a block-level element. [Always takes full width]</p> <br><br><br>
+        <p class="sub-hed">The span tag</p><br>
+        <p>&lt;span&gt; is an inline container. [Takes as much width as necessary]</p><br><br> <hr><br>
+       
+        <center>
+            <p class="sub-hed">Chapter – 4 (Lists, Tables & Forms)</p>
+        </center><br><br>
+        <p class="sub-hed">Lists</h2>
+        <p>Lists are used to display content which represents a list</p><br><br>
+        <p class="sub-hed">Unordered list</p>
+        <p>Used to list unordered items <br><br>
+
+            &lt;ul&gt; <br>
+
+            &lt;li&gt; Home &lt;/li&gt; <br>
+
+            &lt;li&gt; About &lt;/li&gt; <br>
+
+            . <br>
+
+            . <br>
+
+            &lt;/ul&gt;</p><br><br>
+        <p class="sub-hed">Ordered list</p>
+        <p>Used to list ordered items <br><br>
+
+            &lt;ol&gt; <br>
+
+            &lt;li&gt; Phone &lt;/li&gt;<br>
+
+            &lt;li&gt; PC &lt;/li&gt;<br>
+
+            &lt;li&gt; Laptop &lt;/li&gt;<br>
+
+            &lt;/ol&gt;</p> <br><br>
+        <p class="sub-hed">Tables</p>
+        <p>The
+            &lt;table&gt; tag is used to define tables in HTML. <br>
+
+            It is used to format & display tabular data. <br>
+
+            tr tag: used to display table row <br>
+
+            td tag: used to display table data <br>
+
+            th tag: used in place of table data for displaying table headers <br>
+
+            We can define as many table rows as we want. <br><br>
+
+
+
+            To add a caption to the table, we use &lt;caption&gt; tag inside the table. <br>
+
+            thead tag: used to wrap table head (caption & tr with th) <br>
+
+            tbody tag: used to wrap the table body</p><br><br>
+        <p class="sub-hed">Colspan attribute</p><br>
+        <p>This attribute is used to create cells spanning multiple columns. <br>
+
+            &lt;th colspan=”3”&gt; Harry </th> [Spans 3 columns]</p><br><br>
+        <p class="sub-hed">HTML forms</p>
+        <p>An HTML form is used to collect input from the user. <br>
+
+            form tag is used for the same <br>
+
+            &lt;form&gt; <br>
+
+            -Element of the form- <br>
+
+            &lt;/form&gt; <br>
+
+            There are different form elements for different kinds of user input.</p>
+        <br>
+        <ul>
+            <li> <span style="font-weight: bolder;">input element:</span> Can be of type text, checkbox, radio, button
+                and submit. We also have a ‘file’ type</li>
+            <li><span style="font-weight: bolder;">textarea element:</span> Defines a multi-line text input. Cols and
+                rows attributes can be used to size the textarea.</li>
+            <li> <span style="font-weight: bolder;">select element:</span> Defines a drop down list</li>
+        </ul> <br>
+        <p><span style="font-weight: bold;">Note:</span> You don’t have to remember all the tags, you will automatically
+            memorize them with practice.</p><br><br>
+        <p class="sub-hed">Embedding Videos</p><br>
+            Video tag is used to play videos in HTML </p>
+
+            &lt;video src=”harry.mp4”&gt; Error &lt;/video&gt; 
+        <p class="sub-hed">Attributes for video</p>
+            We can use: <br><br>
+        <ul>
+            <li>Width: To adjust width of a video (Height automatically adjusts)</li>
+            <li>We can use autoplay/loop to autoplay or loop the video.</li>
+        </ul> <br><br><hr><br>
+        <center>
+            <p class="sub-hed">Chapter – 5 (SEO)</p>
+        </center>We will focus only on HTML standpoint of SEO. We will not be looking into keyword building and
+        content optimization aspect of SEO 
+        <p class="sub-hed">Types of SEO</p>
+        <ul>
+            <li>On page SEO [Can be done by HTML developers]</li>
+            <li>Off page SEO</li>
+        </ul><br><br>
+        <p class="sub-hed">HTML SEO</p>
+            HTML developers can implement SEO using the following techniques: <br><br>
+        <ol>
+            <li> Set the title very nice & to the point</li>
+            <li>Set the meta description</li>
+            <li>Set a nice URL Slug</li>
+            <li>Set the meta keyword tag</li>
+            <li>Set the meta author tag</li>
+            <li>Set a favicon</li>
+            <li>Compress images & other resources</li>
+            <li>Remove unused HTML/CSS & JS files + Compress them</li>
+            <li>Add alt text to images</li>
+        </ol>
+
+    </div>
+    <br><br>
+    <center>
+        <p class="sub-hed">You can refer to Techi Support videos for better understanding</p>
+    </center>
+    <div class="ccardbox2">
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+
+    </div>
+    </center>
+
+    <br><br>
+    <center> <button class="btn btn-primary">Click here to watch Full Playlist</button></center><br><br><br>
+
+
+
+    <div class="notes-con" id="css">
+        <center>
+             <p class="upper-heading">Introduction to CSS</p>
+        </center><br><br>
+        <p class="sub-hed">CSS Tutorial- Introduction To CSS</p>
+        <p>So finally, after completing HTML, we are moving towards the exciting part, i.e. CSS. <br> CSS stands for
+            Cascading Style Sheets and is used to design the website to make it look attractive. <br>
+
+            Let us first understand, what is CSS?</p><br><br>
+        <ul>
+            <li>CSS gives style to raw HTML</li>
+            <li>It stands for Cascading Style Sheets</li>
+            <li>CSS is used to give style to our web pages</li>
+            <li>CSS is used to make websites responsive</li>
+            <li>CSS takes the responsibility of design in your websites</li>
+        </ul><br><br>
+        <p>CSS includes all the things which can be used to design the raw HTML from colouring the <br>
+            background and texts, to adjust the borders, give padding, etc. Moreover, CSS helps in <br>making websites
+            responsive. Responsive means that the site will behave accordingly to <br>the different screen sizes. For
+            example, if you open a website on a desktop and then on <br>your mobile, you will find the difference
+            between their displays. All the components in <br>a navigation bar will move into a hamburger icon if you
+            open the website on mobile.<br><br>
+
+            We can add styles in the HTML part itself, but I would rather recommend making a new CSS <br>file and then
+            attach it to the HTML part. It is so because it is a professional practice <br>when different developers are
+            working on a single website to keep the skeleton of a <br>website in one file and the styling in another
+            file.</p><br>
+        <h2>Role of CSS</h2><br>
+        <li>CSS is a style sheet language that is used to handle the presentation of the web page <br> containing HTML.
+        </li>
+        <li>It makes our websites beautiful and modern looking.</li>
+        <p class="sub-sub-hed">Rest things to be updated timely</p>
+    </div><br><br>
+    <center>
+        <p class="sub-hed">You can refer to Techi Support videos for better understanding</p>
+    </center>
+    <div class="ccardbox2">
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+        <div class="dcard2">
+            <div class="fpart2">
+                <a href="https://www.youtube.com/channel/UCNX30ikYxuSxWfcFyCLI55A">
+                    <img src="images/components/lec1.png"></a>
+            </div>
+        </div>
+
+    </div>
+    </center>
+
+    <br><br>
+    <center> <button class="btn btn-primary">Click here to watch Full Playlist</button></center><br><br><br>
+
+
+
+    {{>footer}}
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="/fevicon.png">
+	<title>Login SignUp</title>
+	<link rel="stylesheet" href="css/login.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+</head>
+<body>
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" action="/login" method="post">
+				<div class="inp">
+					<img src="images/icons/mail.png"><input type="email" id="email" class="input-field" placeholder="enter email" style="width: 88%; border:none;" required="required" name="email">
+				</div>
+				<div class="inp">
+					<img src="images/icons/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required" name="password">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="images/icons/google.png"><span>Sign in with Google</span>
+				</button>
+			</div>
+			
+			<!-- Registration Form -->
+			<form action="register" method="post" id="register" class="input-group">
+				<input type="text" class="input-field" placeholder="Full Name" required="required" name="username" >
+				<input type="email" class="input-field" placeholder="Email Address" required="required"  name="usermail">
+				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="cpsame" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()" name="agreement">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn" value="register">Register</button>
+			</form>
+		</div>
+		<script src="scripts/script.js"></script>
+</body>
+</html>
