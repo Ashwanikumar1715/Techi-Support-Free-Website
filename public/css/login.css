@@ -4,7 +4,7 @@
 	font-family: sans-serif;
 }
 
-body {
+.body {
 	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("/animated.gif");
 	background-size: cover;
 	background-attachment: fixed;
@@ -15,13 +15,21 @@ body {
 	display: flex;
 	justify-content: center;
 }
-.logo img {
-	width: 100px;
+.logo span{
+	font-size: 30px;
+}
+.logo_name{
+	font-size: 20px;
+	color: aqua;
+}
+.logo_name span{
+	font-size: 20px;
+	color: #fff;
 }
 .form-box
 {
 	width: 380px;
-	height: 500px;
+	height: 519px;
 	position: relative;
 	margin: 6% auto;
 	background: rgba(255, 255, 255, 0.821);
@@ -42,7 +50,7 @@ body {
 
 .toggle-btn
 {
-	padding: 10px 30px;
+	padding: 5px 22px;
 	cursor: pointer;
 	background: transparent;
 	position: relative;
