@@ -1,6 +1,7 @@
 
 /* nav bar complete css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display&family=Teko:wght@300&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -402,7 +403,6 @@ margin-right: 20px;
 .departments {
   padding-block: 80px;
   background: white;
-  margin-left: 40px;
   width: 100%;
 }
 
@@ -421,7 +421,7 @@ margin-right: 20px;
 }
 
 .departments-card {
-  background: var(--white);
+  
   box-shadow: 5px 30px 50px hsla(0, 1%, 15%, 0.05);
   max-width: 400px;
   margin-inline: auto;
@@ -439,7 +439,7 @@ margin-right: 20px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
+
 }
 
 .departments-card:hover img { transform: scale(1.05); }
@@ -452,17 +452,17 @@ margin-right: 20px;
 }
 
 .departments-card .card-link {
-  color: var(--orange-web);
-  font-family: var(--ff-rubik);
-  font-weight: var(--fw-500);
+  font-family: 'Itim', cursive;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  transition: var(--transition);
+
 }
 
 .departments-card .card-link:is(:hover, :focus) { gap: 15px; }
+
+
 /* 
 ********************************************************************************************************
 ******************************************************************************************************* */
