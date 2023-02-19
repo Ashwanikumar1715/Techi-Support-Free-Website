@@ -7,22 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Techi support</title>
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
   <div class="wrapper">
-    <nav>
+    <nav >
       <input type="checkbox" id="show-search">
-      <input type="checkbox" id="show-menu">
+      <input type="checkbox" id="show-menu" class="menu-btn">
       <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-      <div class="content">
+      <div class="content" id="sidebar">
         <div class="logo"><a href="#" style="color: aqua;">Techi<span style="color: rgb(238, 243, 243);">Support</span></a>
         </div>
-        <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
+        <ul class="links" id="menus">
+          <li><a href="#" >Home</a></li>
+          <li><a href="#about" >About</a></li>
           <li>
             <a href="#courses" class="desktop-link">Courses</a>
             <input type="checkbox" id="show-features">
@@ -105,7 +104,7 @@
 
       <figure class="about-banner">
 
-        <img src="images/new-about.jpg" alt="Eduland students" class="about-img">
+        <img src="images/new-about.jpg" alt="techi support students" class="about-img">
 
 
 
@@ -299,7 +298,7 @@
           <div class="teachers-card">
 
             <figure class="card-banner">
-              <img src="images/brijesh.jpg" alt="Shaapir Prio">
+              <img src="images/brijesh.jpg" alt="myself">
             </figure>
 
             <a href="#">
@@ -343,7 +342,7 @@
           <div class="teachers-card">
 
             <figure class="card-banner">
-              <img src="images/me.jpg" alt="Sellina">
+              <img src="images/me.jpg" alt="brijesh">
             </figure>
 
             <a href="#">
@@ -387,7 +386,7 @@
           <div class="teachers-card">
 
             <figure class="card-banner">
-              <img src="images/ajith.jpg" alt="John Smith">
+              <img src="images/ajith.jpg" alt="person3">
             </figure>
 
             <a href="#">
@@ -437,7 +436,7 @@
   <!-- ************************************************************************************************ -->
   <div class="review">
     <div class="diffSection" id="review_section">
-      <center><p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">Some of the Reviews by Students</p></center>
+      <center><h1 class="h2 teachers-title">Some of the Reviews</h1></center>
     </div>
     <div class="rev-container">
       <div class="rev-card">
@@ -496,7 +495,8 @@
 
   <!-- CONTACT US -->
 	<div class="diffSection" id="contactus_section">
-		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<!-- <center><p style="font-size: 50px; padding: 100px">Contact Us</p></center> -->
+    <center><h1 class="h2 teachers-title" style=" padding: 100px">Contact Us</h1></center>
 		<div class="csec"></div>
 		<div class="back-contact">
 			<div class="cc">
@@ -591,7 +591,8 @@
 </footer>
 
   <!-- ******************************************************************************************** -->
-
+  <script src="scripts/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

@@ -42,17 +42,46 @@ function google() {
 // ==================================================================================================
 // ===================================================================================================
 
-function myFunction() {
-  // Get the text field
- var copyText=document.getElementsByClassName(".codes")
 
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
 
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
+$(document).ready(function () {
+$('.carousel').owlCarousel({
+  margin: 20,
+  loop: true,
+  autoplay: true,
+  autoplayTimeOut: 2000,
+  autoplayHoverPause: true,
+  responsive: {
+      0: {
+          items: 1,
+          nav: false
+      },
+      600: {
+          items: 2,
+          nav: false
+      },
+      1000: {
+          items: 3,
+          nav: false
+      }
+  }
+});
+});
 
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

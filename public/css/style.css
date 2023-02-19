@@ -25,6 +25,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.navbar.sticky{
+  background: rgb(100, 6, 232);
+}
 nav .content{
   display: flex;
   align-items: center;
@@ -203,7 +206,7 @@ nav .content .links{
     transition: all 0.3s ease;
   }
   nav #show-menu:checked ~ .content .links{
-    left: 0%;
+    left: -1px;
   }
   .content .links li{
     margin: 15px 20px;
@@ -222,6 +225,10 @@ nav .content .links{
   .content .links li a.desktop-link{
     display: none;
   }
+
+  .navbar .content .links.active{
+    left: 0;
+}
 
   /* dropdown responsive code start */
   .content .links ul,
@@ -265,7 +272,9 @@ nav .content .links{
   .wrapper .search-box input{
     padding-right: 30px;
   }
+
 }
+
 
 /* **************************************************************************************** */
 /* 
@@ -1072,3 +1081,103 @@ height: 40px;
 }
 
 
+
+/* ============================================================================================== */
+/* ============================================================================================== */
+
+
+.teams .carousel .card{
+  background:rgba(9, 1, 1, 0.961);
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+  background: linear-gradient(to right, #e00998, rgb(101, 189, 177));
+  box-shadow: 10px 10px 10px white;
+}
+.teams .carousel .card .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+  transform: scale(1.05);
+}
+.teams .carousel .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.teams .carousel .card img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid crimson;
+  transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+  border-color: #fff;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid crimson!important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: crimson!important;
+}
+#project-link{
+  display: inline-block;
+  background: linear-gradient(to right, #e03009, rgb(194, 246, 9));
+  text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease; 
+}
+#project-link a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+#project-link:hover{
+  background: none;
+  
+}
+
+
+
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
