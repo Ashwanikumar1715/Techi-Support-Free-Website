@@ -779,7 +779,7 @@ button:hover{
 
 
 footer{
- 
+  z-index: 999;
   background: #161616;
   width: 100%;
   bottom: 0;

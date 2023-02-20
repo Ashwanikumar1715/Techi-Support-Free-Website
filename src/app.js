@@ -65,7 +65,9 @@ app.get("/quiz", (req, res) => {
 app.get("/notes", (req, res) => {
     res.render("notes");
 })
-
+app.get("/javascript", (req, res) => {
+    res.render("javascript");
+})
 app.post("/register",async(req,res)=>{
     try{
         const password=req.body.psame;
