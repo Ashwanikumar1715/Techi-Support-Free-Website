@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <title>TechiSupport|Quiz</title>
+    <script>
+      function ToggleMode(){
+         document.querySelector(".quizpagetoshow").style.display="block";
+         document.querySelector(".quizpagetoshow").style.position="absolute";
+          document.querySelector(".toggle").style.display="none";
+          document.querySelector(".toggleclose").style.display="block";
+      }
+      function ToggleModeClose(){
+         document.querySelector(".quizpagetoshow").style.display="none";
+         //document.querySelector(".quizpagetoshow").style.position="absolute";
+          document.querySelector(".toggle").style.display="block";
+          document.querySelector(".toggleclose").style.display="none";
+      }
+    </script>
+</head>
+<body>
+   {{>header}}
+     <br><br><br><br><br><br><br>
+     <div class="quizpageflex">
+   {{>QuizNav}}
+     <div class="quizQuestion">
+      {{>QuizQuestion questionName="HTML Stands For?" option1="Hypertext Machine language" option2="Hypertext  makeup language." option3="Hypertext Markup Language" option4="Hightext machine language" ans="3"}}
+      <br><br><br>
+       {{>QuizQuestion questionName="The correct sequence of HTML tags for Basic Layout of HTML" option1="Head, Title, HTML, body" option2="HTML, Body, Title, Head" option3="HTML, Head, Title, Body" option4="HTML, Head, Title, Body" ans="4"}}
+          <br><br><br>
+       {{>QuizQuestion questionName="Which of the following tag  is used for making the text bold in HTML?" option1="<p></p>" option2="<br>" option3="<b></b>" option4="<hr>" ans="3"}}
+         <br><br><br>
+       {{>QuizQuestion questionName="Which of the following tag is used for largest heading in HTML?" option1="<h1></h1>" option2="<h2></h2>" option3="<h4></h4>" option4="<h6></h6>" ans="1"}}
+                <br><br><br>
+       {{>QuizQuestion questionName="Which of the following tag is used to insert a line-break in HTML?" option1="<br>" option2="<hr>" option3="<pre></pre>" option4="<b></b>" ans="1"}}
+                <br><br><br>
+       {{>QuizQuestion questionName="How to create an unordered list  in HTML?" option1="<ul></ul>" option2="<ol></ol>" option3="<li></li>" option4="<i></i>" ans="1"}}
+                <br><br><br>
+       {{>QuizQuestion questionName="How to create an ordered list in HTML?" option1="<ul></ul>" option2="<ol></ol>" option3="<li></li>" option4="<i></i>" ans="2"}}
+               <br><br><br>
+       {{>QuizQuestion questionName="< body > Is this an opening tag or a closing tag?" option1="opening " option2="Closing" option3="Both" option4="None" ans="1"}}
+         <br><br><br>
+       {{>QuizQuestion questionName="How many heading tags are there in HTML?" option1="3" option2="4" option3="5" option4="6" ans="4"}}
+        <br><br><br>
+       {{>QuizQuestion questionName="Which of the following attributes is used to add link in Anchor tag" option1="href" option2="link" option3="rel" option4="none" ans="1"}}
+       <br><br>
+</div>
+<br><br>
+</div>
+    {{>footer}}
+</body>
+</html>

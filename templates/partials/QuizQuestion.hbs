@@ -1,0 +1,29 @@
+
+ 
+<script>
+  function CheckTheAnswer(ans){
+  //  const op2 = document.querySelectorAll(".Numbering");
+     
+      const op3 = event.target.querySelector(".Numbering").innerHTML;
+     //  console.log(op3);
+      if(ans == op3){
+        console.log("matched");
+        event.target.style.backgroundColor="green";
+      }
+      else{
+        console.log(" not matched");
+        event.target.style.backgroundColor="red";
+      }
+    
+  }
+</script>
+
+<div class="questionbox">
+    <h4 class="questionHeading">Question : - {{questionName}}</h4> 
+    <div class="optionName">
+        <div class="option" onclick="CheckTheAnswer({{ans}})"><span  class="Numbering" >1</span> .  {{option1}}</div>
+       <div class="option" onclick="CheckTheAnswer({{ans}})"> <span  class="Numbering" >2</span> . {{option2}}</div>
+       <div class="option" onclick="CheckTheAnswer({{ans}})"><span class="Numbering" > 3</span>  .{{option3}}</div>
+       <div class="option" onclick="CheckTheAnswer({{ans}})"> <span  class="Numbering" > 4</span> . {{option4}}</div>
+    </div>
+</div>

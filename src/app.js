@@ -59,8 +59,17 @@ app.get("/login", (req, res) => {
 app.get("/projectshome", (req, res) => {
     res.render("projectshome");
 })
-app.get("/quiz", (req, res) => {
-    res.render("quiz");
+// app.get("/quiz", (req, res) => {
+//     res.render("QuizFile/Html1Quiz");
+// })
+app.get("/Htmlquiz1", (req, res) => {
+    res.render("QuizFile/Html1Quiz");
+})
+app.get("/Htmlquiz2", (req, res) => {
+    res.render("QuizFile/Html2Quiz");
+})
+app.get("/Htmlquiz3", (req, res) => {
+    res.render("QuizFile/Html3Quiz");
 })
 app.get("/notes", (req, res) => {
     res.render("notes");
