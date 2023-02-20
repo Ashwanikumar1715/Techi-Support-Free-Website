@@ -1,0 +1,75 @@
+.questionbox{
+   display: block;
+   margin: auto;
+    text-align: center;
+}
+.optionName{
+   text-align: center;
+
+}
+.option{
+    border: 1px solid black;
+    margin-left: 20%;
+    margin-right: 20%;
+   justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+   min-height: 40px;
+    border-radius: 10px;
+}
+.option:hover{
+    background-color: aqua;
+}
+/* .quizpageflex{
+    display: flex;
+} */
+.quizQuestion{
+    border: 2px solid rgb(198, 193, 193);
+    box-shadow: 0px 0px 15px gray;
+    width: 70vw;
+   display: block;
+    margin: auto;
+   
+}
+
+.quizpagetoshow{
+    /* border: 2px solid red; */
+    padding: 25px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: black;
+   width: 150px;
+
+}
+.quizpagetoshow li{
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+}
+.quizpagetoshow li:hover{
+    border: 2px solid rgb(57, 57, 116);
+    border-radius: 20px;
+    background-color: rgb(94, 59, 126);
+}
+.quizpagetoshow li a{
+    color: white;
+}
+.toggle{
+    display: none;
+    cursor: pointer;
+}
+.toggleclose{
+    display: none;
+    cursor: pointer;
+}
+@media (max-width:1000px){
+    .quizpagetoshow{
+        display: none;
+    }
+    .toggle{
+        display: block;
+    }
+}

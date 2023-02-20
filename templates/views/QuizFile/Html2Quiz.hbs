@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quiz.css">
     <title>TechiSupport|Quiz</title>
     <script>
       function ToggleMode(){
@@ -29,9 +29,9 @@
      <div class="quizpageflex">
    {{>QuizNav}}
      <div class="quizQuestion">
-      {{>QuizQuestion questionName="HTML Stands For?" option1="Hypertext Machine language" option2="Hypertext and links markup language." option3="Hypertext Markup Language" option4="Hightext machine language" ans="3"}}
+      {{>QuizQuestion questionName="Which is the correct way to comment out something in HTML?" option1="Using ## and #" option2="Using <!-- and -->" option3="Using </-- and -/->" option4="Using <-- and ->" ans="2"}}
       <br><br><br>
-       {{>QuizQuestion questionName="HTML Stands For?The correct sequence of HTML tags for starting a webpage is -" option1="Head, Title, HTML, body" option2="HTML, Body, Title, Head" option3="HTML, Head, Title, Body" option4="HTML, Head, Title, Body" ans="4"}}
+       {{>QuizQuestion questionName="Which of the following tag is used to create a combo box (or drop-down box)?" option1="<list>" option2="<select>" option3="<input type = 'dropdown'>" option4="<ol>" ans="2"}}
           <br><br><br>
        {{>QuizQuestion questionName="Which of the following element is responsible for making the text bold in HTML?" option1="<p></p>" option2="<br>" option3="<b></b>" option4="<hr>" ans="3"}}
          <br><br><br>
@@ -45,7 +45,5 @@
 </div>
 </div>
     {{>footer}}
-    	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
