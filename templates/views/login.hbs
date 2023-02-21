@@ -1,48 +1,50 @@
+
 <!DOCTYPE html>
-<html>
-
-<head>
-	<title>Login SignUp</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/login.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-
-</head>
-
-<body>
-	<br>
-	<center ><button class="btn btn-primary"><a href="/index.html">Home</a></button></center>
-	<div class="body">
-		<div class="form-box">
-			<div class="button-box">
-				<div id="btn"></div>
-				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
-				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
-			</div>
-			<div class="social-icons">
-				<a href="#"><i class="fab fa-facebook-f"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-
-			<!-- Login Form -->
-			<form id="login" class="input-group" action="/login" method="post">
-				<div class="inp">
-					<img src="images/icons/mail.png"><input type="email" id="email" class="input-field"
-						placeholder="enter email" style="width: 88%; border:none;" required="required" name="email">
-				</div>
-				<div class="inp">
-					<img src="images/icons/password.png"><input type="password" id="password" class="input-field"
-						placeholder="Password" style="width: 88%; border: none;" required="required" name="password">
-				</div>
-				<input type="checkbox" class="check-box">Remember Password
-				<button type="submit" class="submit-btn">Log In</button>
-			</form>
-
-
-			<div class="other" id="other">
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form </title>
+      <link rel="stylesheet" href="css/login.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="/login" method="post" class="login">
+                  <div class="field">
+                     <input type="email" placeholder="Email Address" name="email" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+				  
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+				  			<div class="other" id="other">
 				<div class="instead">
 					<h3>or</h3>
 				</div>
@@ -50,23 +52,29 @@
 					<img src="images/icons/google.png"><span>Sign in with Google</span>
 				</button>
 			</div>
-
-			<!-- Registration Form -->
-			<form action="register" method="post" id="register" class="input-group">
-				<input type="text" class="input-field" placeholder="Full Name" required="required" name="username">
-				<input type="email" class="input-field" placeholder="Email Address" required="required" name="usermail">
-				<input type="password" class="input-field" placeholder="Create Password" name="psame"
-					required="required">
-				<input type="password" class="input-field" placeholder="Confirm Password" name="cpsame"
-					required="required">
-				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()" name="agreement">I agree to
-				the Terms & Conditions
-				<button type="submit" id="btnSubmit" class="submit-btn reg-btn" value="register">Register</button>
-			</form>
-		</div>
-	</div>
-	<script src="scripts/script.js"></script>
-
-</body>
-
+               </form>
+               <form action="/register" method="post" class="signup">
+				<div class="field">
+                    <input type="text" class="input-field" placeholder="Full Name" required="required" name="username">
+				</div>
+				
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" name="usermail" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" name="psame" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" name="cpsame" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+	  <script src="scripts/script.js"></script>
+   </body>
 </html>

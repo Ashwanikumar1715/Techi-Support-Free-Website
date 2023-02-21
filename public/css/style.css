@@ -1,5 +1,6 @@
 
 /* nav bar complete css */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display&family=Teko:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display&family=Teko:wght@300&display=swap');
 *{
@@ -277,10 +278,12 @@ nav .content .links{
 
 
 /* **************************************************************************************** */
-/* 
-body{
-  overflow: hidden;
-} */
+html {
+  scroll-behavior: smooth;
+}
+.service-swipe{
+  scroll-behavior: smooth;
+}
 
 /* ***************************************************************************************** */
 
@@ -774,8 +777,8 @@ transition: 0.2s ease-in-out;
 button {
   background: none;
   border: none;
-  font: inherit;
-    font-family: inherit;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
   cursor: pointer;
 }
 
@@ -1204,6 +1207,29 @@ height: 40px;
 
 /* ============================================================================================== */
 /* ============================================================================================== */
+#scrollUpBtn {
+  display: none;
+  z-index: 9999;
+  cursor: pointer;
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: linear-gradient(to right, #5c6486, rgb(58, 156, 230));
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+#scrollUpBtn:hover {
+  background-color: #e61111;
+}
+
 /* ============================================================================================== */
 /* ============================================================================================== */
 /* ============================================================================================== */
