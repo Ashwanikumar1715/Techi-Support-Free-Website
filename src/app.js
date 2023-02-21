@@ -4,6 +4,7 @@ const path = require("path")
 const hbs = require('hbs');
 require("./db/conn")
 const Register=require("./models/registers");
+const BASE_URL=process.env.BASE_URL
 const port = process.env.PORT || 5000;
 
 
@@ -77,6 +78,9 @@ app.get("/notes", (req, res) => {
 app.get("/javascript", (req, res) => {
     res.render("javascript");
 })
+app.get("*", (req, res) => {
+    res.render("pagenotfound");
+})
 app.post("/register",async(req,res)=>{
     try{
         const password=req.body.psame;
@@ -89,7 +93,7 @@ app.post("/register",async(req,res)=>{
             confirmpassword:cpassword
            })
            const registered= await logininformation.save();
-           res.status(201).render(login);
+           res.status(201).render("login");
         }else{
             res.send("Invalid credential")
         }
@@ -106,7 +110,7 @@ app.post("/login",async(req,res)=>{
       
 const useremail= await Register.findOne({email:email})
 if(useremail.password===password){
-    res.status(201).send("success")
+    res.status(201).render("courses");
 }else{
     res.send("invalid user credentials :(")
 }

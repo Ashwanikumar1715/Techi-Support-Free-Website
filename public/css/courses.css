@@ -35,24 +35,12 @@
 }
   
   .main {
-    /* display: block;
-    margin: auto; */
-    width: 80vw;
-    /* margin-right: 10px; */
-	width: cal(100%-200px); /* Same as the width of the sidenav */
-	font-size: 28px; /* Increased text to enable scrolling */
+   margin-left: 200px;
+	width: cal(100%-200px); 
+	font-size: 28px; 
 	padding: 0px 10px;
   }
 
-  /* .content .lists li a{
-    line-height: 40px;
-	padding: 8px 18px;
-	
-    font-size: 20px;
-    display: block;
-    cursor: pointer;
-	background-color: aqua;
-  } */
  li a:hover{
 background-color: rgb(43, 147, 239);
   }

@@ -9,13 +9,41 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9915106184713182"
      crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <title>TechiSupport|Services</title>
+  <title>TechiSupport</title>
 </head>
 
 <body>
+    <div id="scrollUpBtn"> <i class="fas fa-angle-up"></i></div>
   {{>header}}
+  <section class="about" id="about">
+    <div class="container">
+
+      <figure class="about-banner">
+
+        <img src="images/new-about.jpg" alt="techi support students" class="about-img">
+
+      </figure>
+
+      <div class="about-content">
+
+        <h2 class="h2 about-title">What we Provide through this Platform</h2>
+
+        <p class="section-text">
+         The Platform is built for enthusiastic web developers and software developers looking for
+         free content and guidence.
+       You will find all the services like notes , tutorials , video lectures as well as projects and their source codes
+       for free!
+        </p>
+
+        <button class="btn btn-primary"><a href="/login">Get Started Today</a></button>
+
+      </div>
+    </div>
+  </section>
+
+
   <center>
-    <p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #250707;">Services</p>
+    <p id="service">Services</p>
   </center>
   <div class="service-swipe">
     <div class="diffSection" id="services_section">
@@ -97,7 +125,9 @@
       </div>
     </a>
   </div>
+  <br><br>
   {{>footer}}
+  <script src="scripts/script.js"></script>
      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

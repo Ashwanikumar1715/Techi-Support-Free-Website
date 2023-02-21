@@ -1,43 +1,11 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display&family=Teko:wght@300&display=swap');
 
-.upper-heading{
-  font-size: 2.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-family: 'Itim', cursive;
 
-}
-.notes-con{
-  margin: 5px 60px 5px 60px;
-  
-font-family: 'Playfair Display', serif;
-
-}
-.sub-hed{
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 15px 0 15px 0;
-  font-family: 'Itim', cursive;
-}
-.codes {
-  width: 80vw;
-  max-height: 500px;
-  overflow: auto;
-  display: block;
-  margin: auto;
-  background-color: rgb(141, 130, 130);
-  font-family: 'Teko', sans-serif;
-}
 li{
   list-style: none;
 }
-.sub-sub-hed{
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 10px 0 10px 0;
-}
+
   
   /*Videos Section*/
   .ccardbox2 {

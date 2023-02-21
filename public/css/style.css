@@ -1,5 +1,6 @@
 
 /* nav bar complete css */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display&family=Teko:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display&family=Teko:wght@300&display=swap');
 *{
@@ -135,7 +136,7 @@ nav .content .links{
   position: absolute;
   background: #171c24;
   top: 80px;
-  z-index: -1;
+  z-index: 5;
   opacity: 0;
   visibility: hidden;
 }
@@ -277,15 +278,17 @@ nav .content .links{
 
 
 /* **************************************************************************************** */
-/* 
-body{
-  overflow: hidden;
-} */
+html {
+  scroll-behavior: smooth;
+}
+.service-swipe{
+  scroll-behavior: smooth;
+}
 
 /* ***************************************************************************************** */
 
 .container {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -294,11 +297,11 @@ body{
 }
 
 .Home-page-content{
-  margin-top: 100px;
+  margin-top: 70px;
   width: 50%;
 }
 .Home-page-banner { 
-  margin-top: 100px;
+  margin-top: 70px;
   width: 40%;
 
 }
@@ -307,10 +310,16 @@ body{
 }
 
 
-.Home-page-title { margin-bottom: 20px; }
+.Home-page-title {
+   margin-bottom: 20px; 
+   font-size: 2rem;
+   font-family: 'Playfair Display', serif;
+  }
 
-.Home-page .section-text { margin-bottom: 45px;
+.Home-page .section-text { 
+  margin-bottom: 45px;
 margin-right: 20px;
+font-size: 1.2rem;
  }
 
 .section-text{
@@ -356,7 +365,7 @@ margin-right: 20px;
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 2px solid rgb(209, 30, 30);
   animation: pulseAnim 2s forwards infinite;
 }
 
@@ -364,7 +373,7 @@ margin-right: 20px;
 
   0% {
     transform: scale(1);
-    border-color: black;
+    border-color: rgb(228, 29, 29);
   }
 
   100% {
@@ -378,9 +387,16 @@ margin-right: 20px;
   margin-left: 40px;
 }
 
-.about-title { margin-bottom: 30px; }
+.about-title { margin-bottom: 30px; 
+  font-size: 2rem;
+   font-family: 'Playfair Display', serif;
+}
 
-.about .section-text { margin-bottom: 50px; }
+.about .section-text {
+   margin-bottom: 50px;
+font-size: 1.2rem; 
+
+}
 
 @media screen and (max-width: 668px){
   .Home-page-content,.about-content{
@@ -422,6 +438,8 @@ margin-right: 20px;
 .courses-title {
   text-align: center;
   margin-bottom: 80px;
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .courses-list {
@@ -460,7 +478,8 @@ margin-right: 20px;
 
 .courses-card:hover img { transform: scale(1.05); }
 
-.courses-card .card-title { margin-bottom: 15px; }
+.courses-card .card-title { margin-bottom: 15px; 
+}
 
 .courses-card .card-text {
   line-height: 1.5;
@@ -482,12 +501,18 @@ margin-right: 20px;
 /* 
 ********************************************************************************************************
 ******************************************************************************************************* */
+#service{
+  font-size: 3rem;
+   padding: 50px;
+    padding-bottom: 40px; 
+    font-family: 'Playfair Display', serif;
+}
 .service-swipe {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("/images/back3.jpeg");
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("/images/back-pixel1.jpg");
 	background-size: cover;
 	background-attachment: fixed;
   overflow: hidden;
@@ -500,7 +525,7 @@ margin-right: 20px;
 	margin: 40px 10px;
 }
 .service-swipe .s-card {
-  background-color: #86baca;
+  background-color: #93d3db;
 	display: flex;
 	justify-content: space-around;
 	padding: 10px;
@@ -512,12 +537,13 @@ margin-right: 20px;
 					0 0 50px rgba(0,0,0,0.8);
 	border-radius: 5px;
 	cursor: pointer;
-	transition-duration: .5s;
+	/* transition-duration: .5s; */
 }
 .service-swipe .s-card p {
-	color: #f2f2f2;
-	font-size: 1.2em;
-	font-family: 'Open Sans',sans-serif;
+	color: #270cf6;
+	font-size: 1.3em;
+	/* font-family: 'Open Sans',sans-serif; */
+  font-family: 'Playfair Display', serif;
 }
 .service-swipe .s-card:hover {
 	box-shadow: 0 0 50px rgba(255,255,255,0.8);
@@ -532,7 +558,9 @@ margin-right: 20px;
 
 .teachers .title-wrapper { margin-bottom: 80px; }
 
-.teachers-title { margin-bottom: 30px; }
+.teachers-title { margin-bottom: 30px; 
+  font-family: 'Playfair Display', serif;
+font-size: 2rem;}
 
 .teachers-list {
   display: flex;
@@ -661,7 +689,6 @@ margin-right: 20px;
 /* ***************************************************************************
 *************************************************************************** */
 .csec {
-	
 	position: absolute;
 	width: 100%;
 	height: 250px;
@@ -695,7 +722,7 @@ margin-right: 20px;
 .cc form label {
 	position: absolute;
 	color: #2E3D49;
-	font-size: 10px;
+	font-size: 15px;
 	font-weight: 800;
 }
 .cc form input {
@@ -721,6 +748,7 @@ form textarea {
 	color: #2E3D49;
 	font-weight: 600;
 	padding: 15px;
+  resize: none;
 }
 #csubmit {
 	margin-top: 10px; 
@@ -749,8 +777,8 @@ transition: 0.2s ease-in-out;
 button {
   background: none;
   border: none;
-  font: inherit;
-    font-family: inherit;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
   cursor: pointer;
 }
 
@@ -759,6 +787,8 @@ button a{
 }
 button:hover{
   transform: translateY(-5px);
+  background: rgb(123, 223, 232);
+  box-shadow: 0 0 5px 0px rgb(4, 227, 247);
 }
 
 
@@ -771,6 +801,9 @@ button:hover{
   height: 40vh;
   background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7));
  color: #4f5aec;
+}
+.rounded .registerfast{
+  margin-bottom: 30px;
 }
 
 
@@ -1017,7 +1050,7 @@ footer .bottom-details .bottom_text{
 
 #coding-link  {
   display: inline-block;
-  background: linear-gradient(to right, #e03009, rgb(194, 246, 9));
+  background: linear-gradient(to right, #3255df, rgb(6, 185, 225));
   text-decoration: none;
   color: #fff;
 height: 40px;
@@ -1026,7 +1059,7 @@ height: 40px;
   padding: 5px 5px;
 
   border-radius: 6px;
-  border: 2px solid crimson;
+  border: 2px solid rgb(28, 4, 235);
   transition: all 0.3s ease;
 }
 #coding-link a {
@@ -1042,7 +1075,7 @@ height: 40px;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("/images/back1.webp");
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("/images/back-pixel2.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -1054,7 +1087,7 @@ height: 40px;
 	margin: 40px 10px;
 }
 .notes-swipe .s-card {
-  background-color: #8a9add;
+  background-color: #f0f09f;
   margin-bottom: 40px;
   margin-top: 40px;
 	display: flex;
@@ -1068,12 +1101,13 @@ height: 40px;
 					0 0 50px rgba(0,0,0,0.8);
 	border-radius: 5px;
 	cursor: pointer;
-	transition-duration: .5s;
+	/* transition-duration: .5s; */
 }
 .notes-swipe .s-card p {
-	color: #f2f2f2;
-	font-size: 1.2em;
-	font-family: 'Open Sans',sans-serif;
+	color: #100101;
+	font-size: 1.4em;
+	/* font-family: 'Open Sans',sans-serif; */
+  font-family: 'Playfair Display', serif;
 }
 .notes-swipe .s-card:hover {
 	box-shadow: 0 0 50px rgba(255,255,255,0.8);
@@ -1173,6 +1207,29 @@ height: 40px;
 
 /* ============================================================================================== */
 /* ============================================================================================== */
+#scrollUpBtn {
+  display: none;
+  z-index: 9999;
+  cursor: pointer;
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: linear-gradient(to right, #5c6486, rgb(58, 156, 230));
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+#scrollUpBtn:hover {
+  background-color: #e61111;
+}
+
 /* ============================================================================================== */
 /* ============================================================================================== */
 /* ============================================================================================== */
