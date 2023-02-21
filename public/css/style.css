@@ -537,7 +537,7 @@ font-size: 1.2rem;
 					0 0 50px rgba(0,0,0,0.8);
 	border-radius: 5px;
 	cursor: pointer;
-	transition-duration: .5s;
+	/* transition-duration: .5s; */
 }
 .service-swipe .s-card p {
 	color: #270cf6;
@@ -1101,7 +1101,7 @@ height: 40px;
 					0 0 50px rgba(0,0,0,0.8);
 	border-radius: 5px;
 	cursor: pointer;
-	transition-duration: .5s;
+	/* transition-duration: .5s; */
 }
 .notes-swipe .s-card p {
 	color: #100101;
