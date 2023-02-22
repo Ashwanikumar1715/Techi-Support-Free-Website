@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/loginInfo",{
+mongoose.connect("mongodb+srv://brijesh122004:TechiSupport@cluster0.lu1818j.mongodb.net/test",{
     useNewUrlParser:true,
     useUnifiedTopology:true
     // useCreateIndex:true
