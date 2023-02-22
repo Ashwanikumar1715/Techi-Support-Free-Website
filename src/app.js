@@ -1,16 +1,21 @@
-const express=require('express');
-const app=express();
+const express = require('express');
+
 const path = require("path")
 const hbs = require('hbs');
+
+
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const cookieParser = require('cookie-parser');
 require("./db/conn")
-const Register=require("./models/registers");
-const BASE_URL=process.env.BASE_URL
+const Register = require("./models/registers");
+const BASE_URL = process.env.BASE_URL
 const port = process.env.PORT || 5000;
 
-
+const app = express();
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
- 
+app.use(express.urlencoded({ extended: false }));
+
 //getting paths and adding static and views files**
 const staticPAth = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -20,10 +25,12 @@ app.set('view engine', 'hbs');
 app.set('views', template_path);
 hbs.registerPartials(partial_path);
 
+// cookie 
+app.use(cookieParser());
 //to load static files
 app.use(express.static(staticPAth));
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.render("index");
 })
 
@@ -81,44 +88,59 @@ app.get("/javascript", (req, res) => {
 app.get("*", (req, res) => {
     res.render("pagenotfound");
 })
-app.post("/register",async(req,res)=>{
-    try{
-        const password=req.body.psame;
-        const cpassword=req.body.cpsame;
-        if(password===cpassword){
-           const logininformation=new Register({
-            fullname:req.body.username,
-            email:req.body.usermail,
-            password:password,
-            confirmpassword:cpassword
-           })
-           const registered= await logininformation.save();
-           res.status(201).render("login");
-        }else{
+app.post("/register", async (req, res) => {
+    try {
+        const psame = req.body.psame;
+        const cpsame = req.body.cpsame;
+        console.log(psame);
+        if (psame === cpsame) {
+            const logininformation = new Register({
+                fullname: req.body.username,
+                email: req.body.usermail,
+                psame: psame,
+                cpsame: cpsame
+            })
+            console.log(cpsame);
+
+            // const token = await logininformation.generateAutoToken();
+            // console.log(token);
+        
+            
+          
+
+            const registered = await logininformation.save();
+            res.status(201).render("about");
+        } else {
             res.send("Invalid credential")
         }
-    }catch(error){
+    } catch (error) {
+        // console.log("hello");
         res.status(400).send(error);
     }
 })
 
 
-app.post("/login",async(req,res)=>{
-    try{
-      const email=req.body.email;
-      const password=req.body.password;
-      
-const useremail= await Register.findOne({email:email})
-if(useremail.password===password){
-    res.status(201).render("courses");
-}else{
-    res.send("invalid user credentials :(")
-}
-    }catch(error){
-        res.port(400).send("invalid email/password")
+app.post("/login", async (req, res) => {
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+
+        const useremail = await Register.findOne({ email: email })
+        const isMatch =await bcrypt.compare(password , useremail.psame);
+
+        // middle ware
+        // const token = await userEmail.generateAutoToken();
+        // console.log("token part"+ token);
+        if(isMatch){
+            res.status(201).render("about");
+        }else {
+            res.send("invalid user credentials :(")
+        }
+    } catch (error) {
+        res.status(400).send("invalid email/password")
     }
 })
 
-app.listen(4500,()=>{
+app.listen(4500, () => {
     console.log("app is listenig at 4500");
 })
