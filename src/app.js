@@ -1,5 +1,5 @@
 const express = require('express');
-
+var nodemailer = require('nodemailer');
 const path = require("path")
 const hbs = require('hbs');
 
@@ -24,11 +24,10 @@ const partial_path = path.join(__dirname, "../templates/partials");
 app.set('view engine', 'hbs');
 app.set('views', template_path);
 hbs.registerPartials(partial_path);
-
+app.use(express.static(staticPAth));
 // cookie 
 app.use(cookieParser());
 //to load static files
-app.use(express.static(staticPAth));
 
 app.get("/", (req, res) => {
     res.render("index");
@@ -109,7 +108,7 @@ app.post("/register", async (req, res) => {
           
 
             const registered = await logininformation.save();
-            res.status(201).render("about");
+            res.status(201).render("index");
         } else {
             res.send("Invalid credential")
         }
@@ -132,13 +131,39 @@ app.post("/login", async (req, res) => {
         // const token = await userEmail.generateAutoToken();
         // console.log("token part"+ token);
         if(isMatch){
-            res.status(201).render("about");
+            res.status(201).render("index");
         }else {
             res.send("invalid user credentials :(")
         }
     } catch (error) {
         res.status(400).send("invalid email/password")
     }
+})
+
+
+app.get("/send", (req, res) => {
+let email = req.query.mail;
+let addtional = req.query.addtional;
+const mail = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+        user: process.env.email,
+        pass: process.env.password
+    }
+});
+mail.sendMail({
+    from: process.env.email,
+    to: email,
+    subject: 'Feedback',
+    html: "Thanks for your feedback <br>" + addtional
+}, (err) => {
+    if (err) throw err;
+    res.send('Thanks For your feed back')
+
+
+})
 })
 
 app.listen(4500, () => {
