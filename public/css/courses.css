@@ -28,6 +28,24 @@
   overflow-y: scroll;
 	padding-top: 20px;
   }
+
+  .sidenav.show {
+    /* show sidenav */
+    transform: translateX(0);
+  }
+  
+  .sidenav.hide {
+    /* hide sidenav */
+    transform: translateX(-200px);
+  }
+  
+  .toggle-button {
+    /* button styles */
+    position:fixed;
+    top: 80px;
+    right: 20px;
+  }
+
   .sidenav nav{
 	position: relative;
 	display: flex;
