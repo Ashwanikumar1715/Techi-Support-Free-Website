@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://brijesh122004:TechiSupport@cluster0.lu1818j.mongodb.net/test",{
+mongoose.connect("mongodb+srv://ashwanik:ashwanik@cluster0.bv4iv1x.mongodb.net/TechiSupport?retryWrites=true&w=majority",{
     useNewUrlParser:true,
     useUnifiedTopology:true
     // useCreateIndex:true
