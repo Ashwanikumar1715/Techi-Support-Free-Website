@@ -108,7 +108,7 @@ app.post("/register", async (req, res) => {
           
 
             const registered = await logininformation.save();
-            res.status(201).render("index");
+            res.status(201).render("login");
         } else {
             res.send("Invalid credential")
         }
